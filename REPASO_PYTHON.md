@@ -304,6 +304,18 @@ def suma (a+b):
 
 mi_print(suma(45+12)) # 57
 
+EJEMPLO
+```python
+lista=[12,34,5,7,78]
+mi_print(max(lista))
+
+def mi_max(lista):
+  numero_mayor=lista[0]
+  for numero in lista:
+    if numero > numero_mayor:
+      numero_mayor= numero
+  return numero_mayor
+mi_print(mi_max(lista))
 ```
 
 
