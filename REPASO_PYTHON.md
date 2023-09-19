@@ -238,7 +238,72 @@ print(type(numero_entero))
 >**Funcion para convertir de un entero a un string. *(str)***
 ```python
 # str(100) ->> "100" ->> string
+>**funciones de python que nos permite agregar elementos al final de una lista. *(append)***
+```python
+lista=[1,3,4,5,6...]
+elemento=100
+lista.append(elemento)
+print(lista)
+```
+>**funcion de python que nos permite eliminar los elementos que se encuentra al final de una lista . *(pop)***, tambien sirve como una papelera, que guarda los elementos eliminados temporalmente.
+```python
+lista[23,45,2,34]
+lista.pop()
+print(lista)
 
-2. Funciones creadas
+```
+>**funcion de python que nos permite agregar elementos en cualquier posicion de la lista para eso se le tiene que pasar dos parametros, primero indicarle el indice y segundo el dato que se va agregar. *(insert)***
+```python
+lista_nombres["jory","orlando","edwin"]
+lista_nombres.insert(1,"adan") ## si colocamos -1 o indices negativossolo se restara del indice positivo
+print(lista_nombres)
+```
+>**funcion de python que nos permite eliminar elementos en cualquier posicion de la lista, esta funcion recibe solo el elemento que deseamos eliminar. *(remove)***
+```python
+lista=[23,4,5,76]
+lista.remove(76)
+print(lista)
+```
+>**funcion de python que nos permite dividir en una lista una cadena. *(split)***
+```python
+cadena="hola como estas"
+lista=cadena.split()
+print(lista)
+url="www.golle.com/id=70133573"
+id= url.split(".").pop()
+print(id)
+```
+#### 2. Funciones creadas
+Una funcion son mini programas tambien se le conoce como modulos o fragmentos de codigo de uso exclusivo.
+funciones propias:
+pasos para crear una funcion propia.
+1. Hacer uso de la palabra **def**
+2. Definir un nombre de una funcion que describa que tarea va a ser realizada.
+3. Establecer los parametros que resivira la funcion entre **parentesis ()**.
+4. Establecer que valor o dato va a retornar mi funcion con la palabra reservada **return**.
+ > OBSERVACIÓNES: Tambien podemos hacer uso de la funcion **print()** para retornar un mensaje en nuestra funcion.
+Existen dos tipos de funciones los que no resiven ningun parametro y los que resiven parametros
+```python 
+def saludo():
+  print ("hola mundo")
+```
+- como hacemos la funcion 
+- nombre de la funcion y parentesis.
+  
+Funcion con parametros
+```python
+def mi_print(texto):
+print(texto)
+
+#print ("hola este es mi print de python")
+#mi_print("hola este es mi print creado")
+
+def suma (a+b):
+  total=a+b
+  return total
+
+mi_print(suma(45+12)) # 57
+
+```
 
 
