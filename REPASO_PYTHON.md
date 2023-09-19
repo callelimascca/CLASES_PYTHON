@@ -215,6 +215,29 @@ entre parentesis pondremos escribir un mensaje que accion realizara el usuario.
 ```python 
 input("Ingresa la información: ")
 ```
+>**max ()**: es funcion nos muestra el numero mayor de una lista 
+```python
+lista=[23,34,56,45,12,1]
+numero_mayor= max(lista)
+print(numero_mayor)
+```
+>**min ()**: esta funcion nos muestra el numero menor de una lista.
+```python
+lista=[23,34,56,45,12,1]
+numero_menor= min(lista)
+print(numero_menor)
+```
+>**Funcion para convertir de un string a un numero entero. *(int)***
+```python
+## int("100") -> 100 ->> entero
+numero_string= "100"
+print(type(numero_string))
+numero_entero=int(numero_string)
+print(type(numero_entero))
+```
+>**Funcion para convertir de un entero a un string. *(str)***
+```python
+# str(100) ->> "100" ->> string
 
 2. Funciones creadas
 
