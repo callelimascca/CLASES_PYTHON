@@ -32,7 +32,7 @@ else:
 #  num=int(input("Ingresa un numero: "))
 #  if num == numero:
 #    print("FELICIDADES, HAS GANADO EL PREMIO!! ")
-
+#=====================================
 numero_ganador = 45
 condicion=True
 while condicion:
@@ -42,3 +42,19 @@ while condicion:
         condicion=False
     else:
         print("sigue intentando")
+#=====================================
+def mi_print(texto):
+    print(texto)
+def suma(a,b):
+    return a+b
+def resta(a,b):
+    return a-b   
+def divi(a,b):
+    return a/b
+def multi(a,b):
+    return a*b 
+
+mi_print(suma(4,5))
+mi_print(resta(4,5))
+mi_print(divi(4,5))
+mi_print(multi(4,5))
