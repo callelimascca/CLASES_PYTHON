@@ -316,6 +316,18 @@ def mi_max(lista):
       numero_mayor= numero
   return numero_mayor
 mi_print(mi_max(lista))
+#=================================
+lista=[12,34,5,7,78]
+mi_print(min(lista))
+
+def mi_min(lista):
+  numero_menor=lista[0]
+  for numero in lista:
+    if numero < numero_menor:
+      numero_menor= numero
+  return numero_menor
+mi_print(mi_min(lista))
+
 ```
 
 
