@@ -37,3 +37,32 @@ while True:
     print("FELICIDADES, HAS GANADO EL PREMIO!! ")
   else:
      print("LO SENTIMOS EL NUMERO INGRESADO NO ES VALIDO, SIGA INTENTANDO.")
+
+## 5. crear una funcion por cada operador aritmetico que reciba dos parametros y que te retorne el resultado de la operacion
+## crearse una funcion que nos permita imprimir el resultado.
+
+def suma(a,b):
+    return a+b
+
+def resta(a,b):
+    return a-b
+    
+def divi(a,b):
+    return a/b
+
+def multi(a,b):
+    return a*b
+
+def resultados(resultado):
+    print(resultado)
+
+resultado_suma= suma(6,3)
+resultado_resta= resta(6,3)
+resultado_divi= divi(6,3)
+resultado_multi= multi(6,3)
+
+resultados(resultado_suma)
+resultados(resultado_resta)
+resultados(resultado_divi)
+resultados(resultado_multi)
+    
