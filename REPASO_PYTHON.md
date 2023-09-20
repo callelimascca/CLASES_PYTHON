@@ -329,5 +329,22 @@ def mi_min(lista):
 mi_print(mi_min(lista))
 
 ```
+#### funciones con muchos parametros
 
+```python
+def funcion(*muchos_parametros*)
+  total=0
+  for numero in muchos_parametros:
+     total=total + numero
+  return total
+print(funcion(35,45,29,32,78))
+
+def datos(*args):
+    nombre=args[0]
+    pellidos=args[1]
+    edad=args[2]
+    return  f" mi nombre es, {nombre}, {apellido},  y mi edad es {edad}"
+print(datos("Jenny", "Calle", "12"))
+
+```
 
