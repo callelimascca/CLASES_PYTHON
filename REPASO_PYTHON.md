@@ -277,12 +277,6 @@ url="www.golle.com/id=70133573"
 id= url.split(".").pop()
 print(id)
 ```
-> **pop almacena el dato que eliminamos, solo debemos almacenarlos en una variable para mostrarlo**
-```python
-lista=[15,12,50]
-eliminado=lista.pop()
-print(eliminado)
-```
 
 #### 2. Funciones creadas
 Una funcion son mini programas tambien se le conoce como modulos o fragmentos de codigo de uso exclusivo.
@@ -381,31 +375,5 @@ def datos(*args):
     edad=args[2]
     return  f" mi nombre es, {nombre}, {apellido},  y mi edad es {edad}"
 print(datos("Jenny", "Calle", "12"))
-
-```
-
-EJEMPLO
-```python
-lista=[12,34,5,7,78]
-mi_print(max(lista))
-
-def mi_max(lista):
-  numero_mayor=lista[0]
-  for numero in lista:
-    if numero > numero_mayor:
-      numero_mayor= numero
-  return numero_mayor
-mi_print(mi_max(lista))
-#=================================
-lista=[12,34,5,7,78]
-mi_print(min(lista))
-
-def mi_min(lista):
-  numero_menor=lista[0]
-  for numero in lista:
-    if numero < numero_menor:
-      numero_menor= numero
-  return numero_menor
-mi_print(mi_min(lista))
 
 ```
