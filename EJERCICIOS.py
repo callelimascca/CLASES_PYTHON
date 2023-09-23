@@ -37,3 +37,76 @@ while True:
     print("FELICIDADES, HAS GANADO EL PREMIO!! ")
   else:
      print("LO SENTIMOS EL NUMERO INGRESADO NO ES VALIDO, SIGA INTENTANDO.")
+
+     ## 5. crear una funcion por cada operador aritmetico que reciba dos parametros y que te retorne el resultado de la operacion
+## crearse una funcion que nos permita imprimir el resultado.
+
+def suma(a,b):
+    return a+b
+
+def resta(a,b):
+    return a-b
+    
+def divi(a,b):
+    return a/b
+
+def multi(a,b):
+    return a*b
+
+def resultados(resultado):
+    print(resultado)
+
+resultado_suma= suma(6,3)
+resultado_resta= resta(6,3)
+resultado_divi= divi(6,3)
+resultado_multi= multi(6,3)
+
+resultados(resultado_suma)
+resultados(resultado_resta)
+resultados(resultado_divi)
+resultados(resultado_multi)
+
+## 6. Escribe una funcion que reciba un numero entero positivo y devuelva su factorial
+
+num = int(input('ingresa un numero positivo: '))
+
+def factorial(n):
+    if n == 0:
+        return 1
+    if num < 0: 
+        print("error, ingresaste un numero negativo")
+    else:
+        return n * factorial(n - 1)
+result = factorial(num)
+print(result)
+
+## 7. escribir una funcion que reciba como parametros una lista de numeros y retorne una nueva lista con el cuadro de cada numero de la lista ingresada
+lista_numeros=[2,4,8]
+def funcion(lista):
+    nueva_lista=[]
+    for numero in lista:
+        nueva_lista.append(numero**2)
+    return nueva_lista
+#print(funcion(45,50,15,20))
+
+print(funcion(lista_numeros))
+
+
+## 8. escribir un programa que reciba una cadena de caracteres y devuelva un objeto con cada palabra que contiene y su frecuencia.
+
+def contar_frecuencia_palabras(cadena):
+    frecuencia_palabras = {}
+    palabras = cadena.split()
+
+    for palabra in palabras:
+        if palabra in frecuencia_palabras:
+            frecuencia_palabras[palabra] += 1
+        else:
+            frecuencia_palabras[palabra] = 1
+
+    return frecuencia_palabras
+
+# Ejemplo de uso:
+cadena = "Hola mundo, hola de nuevo"
+resultado = contar_frecuencia_palabras(cadena)
+print(resultado)
