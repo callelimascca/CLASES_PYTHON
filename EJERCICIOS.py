@@ -94,12 +94,16 @@ print(funcion(lista_numeros))
 ## 8. escribir un programa que reciba una cadena de caracteres y devuelva un objeto con cada palabra que contiene y su frecuencia.
 
 def contar_frecuencia_palabras(cadena):
-    frecuencia_palabras = {}
+    frecuencia_palabras = {
+       'cadena': '',
+       'frecuencia': 0
+    }
     palabras = cadena.split()
 
     for palabra in palabras:
         if palabra in frecuencia_palabras:
-            frecuencia_palabras[palabra] += 1
+            frecuencia_palabras['cadena'] = palabra
+            frecuencia_palabras['frecuencia'] += 1
         else:
             frecuencia_palabras[palabra] = 1
 
