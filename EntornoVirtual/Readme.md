@@ -17,14 +17,14 @@ ingresamos con cd y la ruta del archivo
 ejemplo:
 
 ```bash
-cd <ruta del archivo>
+cd <ruta del archivo >
 #EJEMPLO
 cd nombre_carpeta/entorno_uno
 ```
 2. creamos un entorno virtual con el siguiente comando:
 
 ```bash
-python -m venv <nombre de nuestro entorno virtual>
+python -m venv <nombre de nuestro entorno virtual >
 #EJEMPLO
 python -m venv mi_entorno
 ```
@@ -34,10 +34,11 @@ python -m venv mi_entorno
 source venv_uno/Scripts/activate
 ```
 > ### OBSERVACION: 
-> Para poder ejecutarlo en powershell como terminal determinado ejecutar el siguiente comando.
-```powershell
-venv_uno/Scripts/activate.ps1
-```
+> Para poder ejecutarlo en **powershell** como terminal determinado ejecutar el siguiente comando.
+>```powershell
+>venv_uno/Scripts/activate.ps1
+>```
+
 # PARA INSTALAR PAQUETES EN NUESTRO ENTORNO VIRTUAL
 1. Primero verifiquemos que no tengamos el paquete instalado y lo listamos con el siguiente comando.
 
@@ -51,3 +52,4 @@ pip install <nombre del paqute>
 #ejemplo
 pip install pandas
 ```
+
