@@ -20,9 +20,42 @@ mi_celular.enviar_mensaje("987654321", "¡Hola! ¿Cómo estás?")
 #=================================================
 
 # 2. Haciendo uso de la POO crear un objeto para la entidad vehiculo.
+class Vehiculo:
+    def __init__(self, marca, modelo, color):
+        self.marca = marca
+        self.modelo = modelo
+        self.color = color
 
+    def acelerar(self):
+        print(f"El vehículo {self.marca} {self.modelo} está acelerando")
+
+    def frenar(self):
+        print(f"El vehículo {self.marca} {self.modelo} está frenando")
+mi_vehiculo = Vehiculo("Toyota", "Corolla", "Rojo")
+
+# Acceder a los atributos del objeto
+print(f"Marca: {mi_vehiculo.marca}")
+print(f"Modelo: {mi_vehiculo.modelo}")
+print(f"Color: {mi_vehiculo.color}")
+mi_vehiculo.acelerar()
+mi_vehiculo.frenar()
 
 # 3. Haciendo uso de la POO crear un objeto para la entidad avion.
+class avion():
+
+    ruedas=2
+
+    def desplazamiento(self):
+        print("El coche se esta desplazando sobre 2 ruedas")
+    
+miAvion=avion()
+
+print("Mi avion tiene ", miAvion.ruedas, " ruedas")
+
+miAvion.desplazamiento()
+
 
 
 # 4. Haciendo uso de la POO crear un objeto para un heroe de Dota2.
+class heroe():
+    
