@@ -54,8 +54,5 @@ print("Mi avion tiene ", miAvion.ruedas, " ruedas")
 
 miAvion.desplazamiento()
 
-
-
 # 4. Haciendo uso de la POO crear un objeto para un heroe de Dota2.
-class heroe():
-    
+
