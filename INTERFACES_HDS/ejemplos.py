@@ -11,7 +11,8 @@ canvas.config(bg = "pink")
 ventana= tk.Tk()
 
 def saludar():
-    etiqueta.config(text="¡Hola, Maria!")
+    etiqueta.config(text="¡Hola, Maria♥!")
+    etiqueta.config(bg = "pink")
 
 boton = tk.Button(ventana, text="Saludo", command=saludar)
 boton.pack()
