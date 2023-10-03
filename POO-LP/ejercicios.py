@@ -108,11 +108,48 @@ class PC:
     def mostrar_por_pantalla(self):
         return f"Mostrar la informacion que el usuario accede a la PC."
 
-mi_PC=PC("HP", "Pavilion", "Intel Core i7", "8GB")
+mi_PC=PC()
 mi_PC.mostrar_informacion
 print(mi_PC.mostrar_por_pantalla())
     
 
 # 6. Haciendo uso de la POO crear un objeto para una impresora.
+class Impresora:
+    def __init__(self, marca, modelo, tipo):
+        self.marca = marca
+        self.modelo = modelo
+        self.tipo = tipo
+
+    def imprimir(self, documento):
+        print("Imprimiendo:", documento)
+
+    def mostrar_informacion(self):
+        print("Marca:", self.marca)
+        print("Modelo:", self.modelo)
+        print("Tipo:", self.tipo)
+
+mi_impresora = Impresora("Epson", "L355", "Inyección de tinta")
+
+mi_impresora.mostrar_informacion()
+mi_impresora.imprimir("MiArchivo.pdf")
 
 # 7. Haciendo uso de la POO crear un objeto para emitir una factura.
+class Factura:
+    def __init__(self, numero, fecha, cliente, total):
+        self.numero = numero
+        self.fecha = fecha
+        self.cliente = cliente
+        self.total = total
+
+    def mostrar_informacion(self):
+        print("Número de factura:", self.numero)
+        print("Fecha:", self.fecha)
+        print("Cliente:", self.cliente)
+        print("Total:", self.total)
+
+
+# Crear un objeto para una factura
+mi_factura = Factura("F0001", "01/05/2022", "Cliente A", 150.50)
+
+# Mostrar la información de la factura
+mi_factura.mostrar_informacion()
