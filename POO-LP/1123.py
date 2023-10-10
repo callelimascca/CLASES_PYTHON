@@ -1,23 +1,38 @@
-class Impresora:
-    def __init__(self, marca, modelo, tipo):
-        self.marca = marca
-        self.modelo = modelo
-        self.tipo = tipo
+#Crear un objeto clase laptop con dos atributos de clase y 5 atributos de instancia debera tener hasta 3 funcionalidades como minim.
+#crear tres objetos instancia de clase distinta
+class Laptop:
+    familia="computadora portatil"
+    def __init__(self, marca, modelo,procesador,memoria_ram,almacenamiento):
+        self.marca=marca
+        self.modelo=modelo
+        self.procesador=procesador
+        self.memori_ram=memoria_ram
+        self.almacenamiento=almacenamiento
+    
+    def encender(self, endendido):
+        return f'la laptop se esta encendiendo........ {endendido}'
+    
+    def apagar(self, apagada):
+        return f'la laptop esta {apagada} '
+    
+    def info(self):
+        return f'la laptop de{self.marca} nos muestra la informacion que ingresamos a la laptop'
+    
 
-    def imprimir(self, documento):
-        print("Imprimiendo:", documento)
+mi_laptop= Laptop('hp','Pavilion 15-eg0500la','Procesador Intel® Core™ i5 de 11.ª generación', '8MB','Unidad de estado sólido PCIe® NVMe™ M.2 de 256 GB')
 
-    def mostrar_informacion(self):
-        print("Marca:", self.marca)
-        print("Modelo:", self.modelo)
-        print("Tipo:", self.tipo)
+print( mi_laptop.encender('la laptop ya esta encendida ☺'))
+print( mi_laptop.apagar('apagada ♥'))
+print(mi_laptop.info ())
 
+mi_laptop2= Laptop('lenovo','Pavilion 15-eg0500la','Procesador Intel® Core™ i5 de 11.ª generación', '8MB','Unidad de estado sólido PCIe® NVMe™ M.2 de 256 GB')
 
-# Crear un objeto para una impresora
-mi_impresora = Impresora("Epson", "L355", "Inyección de tinta")
+print( mi_laptop.encender('la laptop ya esta encendida ☺'))
+print( mi_laptop.apagar('apagada ♥'))
+print(mi_laptop.info ())
 
-# Mostrar la información de la impresora
-mi_impresora.mostrar_informacion()
+mi_laptop3= Laptop('asu','Pavilion 15-eg0500la','Procesador Intel® Core™ i5 de 11.ª generación', '8MB','Unidad de estado sólido PCIe® NVMe™ M.2 de 256 GB')
 
-# Imprimir un documento
-mi_impresora.imprimir("MiArchivo.pdf")
+print( mi_laptop.encender('la laptop ya esta encendida ☺'))
+print( mi_laptop.apagar('apagada ♥'))
+print(mi_laptop.info ())

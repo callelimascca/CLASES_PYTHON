@@ -153,3 +153,4 @@ mi_factura = Factura("F0001", "01/05/2022", "Cliente A", 150.50)
 
 # Mostrar la información de la factura
 mi_factura.mostrar_informacion()
+
