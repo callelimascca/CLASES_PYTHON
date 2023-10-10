@@ -1,23 +1,36 @@
-class Impresora:
-    def __init__(self, marca, modelo, tipo):
-        self.marca = marca
-        self.modelo = modelo
-        self.tipo = tipo
+class mercado:
+    venta="alimentos y otros..."
 
-    def imprimir(self, documento):
-        print("Imprimiendo:", documento)
+    def __init__ (self,nom_puesto, propietario, productos, precios, horario):
+        self.nom_puesto=nom_puesto
+        self.propietario=propietario
+        self.productos=productos
+        self.precios=precios
+        self.horario=horario
 
-    def mostrar_informacion(self):
-        print("Marca:", self.marca)
-        print("Modelo:", self.modelo)
-        print("Tipo:", self.tipo)
+    def info(self):
+        print(f"""
+     +-------------------------------------------------------------+   
+     |   Nombre del puesto: {self.nom_puesto}                  
+     |   Propietario: {self.propietario}                           
+     |   Productos: {self.productos}                           
+     |   Precios: {self.precios}                           
+     |   Horario de atención: {self.horario}                       
+     +--------------------------------------------------------------+   
+        """)
+    def abre (self, hora):
+        return f"""
 
+        el puesto {self.nom_puesto} abre a las {hora}
+        """
+puesto_China= mercado("la china","lulu","menus","precio regalado","6-7")
+print(puesto_China.info())
+print(puesto_China.abre("a las 6:30 a.m  :)"))
 
-# Crear un objeto para una impresora
-mi_impresora = Impresora("Epson", "L355", "Inyección de tinta")
+puesto_uvita= mercado("la uvita","ana","licuados","precio regalado","7-7")
+print(puesto_uvita.info())
+print(puesto_uvita.abre("a las 7:00 a.m  :)"))
 
-# Mostrar la información de la impresora
-mi_impresora.mostrar_informacion()
-
-# Imprimir un documento
-mi_impresora.imprimir("MiArchivo.pdf")
+puesto_jory= mercado("la china","jory","frutas","precio regalado","8-5")
+print(puesto_jory.info())
+print(puesto_jory.abre("a las 8:00 a.m  :)"))
