@@ -16,8 +16,8 @@ widget_uno.grid(row=2,column=0)
 widget_uno.config(width=50, height=50)
 
 widget_uno=Frame()
-widget_uno.grid(row=3,column=1)
-widget_uno.config(width=100, height=150)
+widget_uno.grid(row=4,column=1, columnspan=3)
+widget_uno.config(width=200, height=250)
 widget_uno.config(bg='pink')
 
 #etiquetas
