@@ -45,3 +45,12 @@ print( llamandoNadine.familia)
 print( llamandoNadine.llamar ('edwin'))
     
  ```
+
+
+ <OBSERVACION
+ #casos de uso
+#historia de usuario
+#producto ower
+#baclog
+#mvp
+#prototipos de mierda 
