@@ -1,13 +1,13 @@
 alumnos=[
     {
-        'id':1,
-        'nombre':'Orlando',
-        'apellido':'Lopez Santaria',
-        'dni':7454522,
-        'edad':20,
-        'sexo':'M',
-        'periodo academico':'III periodo',
-        'programa de estudio':'APSTI'
+        'ID':1,
+        'NOMBRE':'Orlando',
+        'APELLIDO':'Lopez Santaria',
+        'DNI':7454522,
+        'EDAD':20,
+        'SEXO':'M',
+        'PERIODO ACADEMICO':'III periodo',
+        'PROGRAMA DE ESTUDIO':'APSTI'
         
     }
 ]
@@ -40,14 +40,14 @@ class Alumno:
     def registrar_alumno(self):
         nuevo_id=len(alumnos)+1
         alumno_nuevo={
-            'id':nuevo_id,
-            'nombre':self.nombre,
-            'apellido':self.apellido,
-            'dni':self.dni,
-            'edad':self.edad,
-            'sexo':self.sexo,
-            'periodo academico':self.periodo,
-            'programa de estudio':self.programa
+            'ID':nuevo_id,
+            'NOMBRE':self.nombre,
+            'APELLIDO':self.apellido,
+            'DNI':self.dni,
+            'EDAD':self.edad,
+            'SEXO':self.sexo,
+            'PERIODO ACADEMICO':self.periodo,
+            'PROGRAMA DE ESTUDIO':self.programa
         }
             
         registro_alumno=alumnos.append(alumno_nuevo)
@@ -55,7 +55,7 @@ class Alumno:
 
     def eliminar_alumno(self, id):
         alumno_eliminar=alumnos.pop(id-1)
-        return f"el siguiente producto fue eliminado: {alumno_eliminar}"
+        return f"el siguiente alumno fue eliminado: {alumno_eliminar}"
 
     def actualizar_alumno(self, id, clave, valor):
         alumnos[id-1][clave]=valor
@@ -69,4 +69,4 @@ print(a.mostrar_alumno(1))
 print(a.mostrar_alumnos())
 print(a.eliminar_alumno(2))
 print(a.mostrar_alumnos())
-print(a.actualizar_alumno(1,clave='edad',valor='aceite'))
+print(a.actualizar_alumno(1,clave='edad',valor='sexo'))
