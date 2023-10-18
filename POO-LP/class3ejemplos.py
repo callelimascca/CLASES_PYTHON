@@ -6,6 +6,7 @@
 productos=[
     {
         "ID":1,
+        "CODIGO":"2023-A",
         "NOMBRE":"ARROZ",
         "DESCRIPCIÓN":"COSTEÑO COSTAL X 100 K",
         "STOCK":5,
@@ -40,13 +41,14 @@ class Producto:
     def registrar_producto(self):
         nuevo_id=len(productos)+1
         producto_nuevo={
-            'id': nuevo_id,
-            'nombre': self.nombre,
-            'descripcion': self.descripcion,
-            'stock': self.stock,
-            'unidad':self.unidad,
-            'precio': self.precio,
-            'moneda':self.moneda
+            "ID": nuevo_id,
+            "CODIGO":"2023-B",
+            "NOMBRE": self.nombre,
+            "DESCRIPCION": self.descripcion,
+            "STOCK": self.stock,
+            "UNIDAD":self.unidad,
+            "PRECIO": self.precio,
+            "MONEDA":self.moneda
 
         }
         registro_producto=productos.append(producto_nuevo)
@@ -60,20 +62,25 @@ class Producto:
         producto_eliminado=productos.pop(id-1)
         return f"el siguiente producto fue eliminado {producto_eliminado}"
 
-    def actualizar_producto(self,id):
-        actualizacion=productos[id+1]
-        return actualizacion
+    def actualizar_producto(self,id,clave,valor):
+        ol=valor
+        actualizacion= list(filter(lambda obj: obj[clave]==id, productos))[0].update({clave:valor}) 
+        #LIST--funcion para crear una lista {'h','o','l','a'} 
+        #METODO FUNCIONAL FILTER --> Retorna una lista nueva con el elemento que sea True en una listak
+        #funciones anonimas o autoejecutados en python se les conoce como funciones
+        #lambda --> funcion anonima: lambda a,b: return a+b---esta funcion no se llama, se autoejecuta
+        return "se actualizo"
     
+#PROGRAMACION FUNCIONAL DE PYTHON
 
 
 prod=Producto('aceite','sol 1L',2,'BOTELLA',10)
 print(prod.registrar_producto())
-print(prod.actualizar_producto(2))
 print(prod.mostrar_productos())
-print(prod.mostrar_un_producto(1))
-print(prod.eliminar_producto(2))
-print(prod.actualizar_producto(2))
+# print(prod.mostrar_un_producto(1))
+# print(prod.eliminar_producto(2))
+# print(prod.mostrar_productos())
+print(prod.actualizar_producto("2023-B","CODIGO","CUALQUIER COSA"))
 print(prod.mostrar_productos())
-
 
 

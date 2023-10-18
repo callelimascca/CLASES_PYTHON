@@ -58,15 +58,19 @@ class Alumno:
         return f"el siguiente alumno fue eliminado: {alumno_eliminar}"
 
     def actualizar_alumno(self, id, clave, valor):
-        alumnos[id-1][clave]=valor
-        pass
+         ol=valor
+         actualizacion= list(filter(lambda obj: obj[clave]==id, alumnos))[0].update({clave:valor}) 
+        # alumnos[id-1][clave]=valor
+        # pass
     
 
 a=Alumno('Maria','Calle Limascca',73211542, 19,'F', 'IV periodo')
 print(a.registrar_alumno())
 print(a.mostrar_alumnos())
-print(a.mostrar_alumno(1))
-print(a.mostrar_alumnos())
-print(a.eliminar_alumno(2))
-print(a.mostrar_alumnos())
-print(a.actualizar_alumno(1,clave='edad',valor='sexo'))
+# print(a.mostrar_alumno(1))
+# print(a.mostrar_alumnos())
+# print(a.eliminar_alumno(2))
+# print(a.mostrar_alumnos())
+#--print(a.actualizar_alumno(1,clave='edad',valor='sexo'))
+print(a.actualizar_alumno())
+print(a.mostrar_alumnos(73211542, 'DNI'))
