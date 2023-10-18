@@ -47,6 +47,13 @@ list_alumnos=[
     }
 
 ]
-print(f" Todos los alumnos: {list_alumnos}")
-hobbies=list(filter(lambda par:par['HOBBY']=='danza',list_alumnos))
-print(f" Los alumnos que tiene el hobbie de {hobbies}")
+# print(f" Todos los alumnos: {list_alumnos}")
+# hobbies=list(filter(lambda par:par['HOBBY']=='danza',list_alumnos))
+# edad=list(filter(lambda e:e['EDAD']> 20, list_alumnos))
+# print(f" Los alumnos que tiene el hobbie de {hobbies}")
+# print(f" Los alumnos que tiene mayor de {edad}")
+
+nuevo=list(map(lambda par:{'Nombre_Alumno':par['NOMBRE'],'DANZA':par['HOBBY']},list_alumnos))
+print(nuevo)
+
+
