@@ -54,3 +54,31 @@ print( llamandoNadine.llamar ('edwin'))
 #baclog
 #mvp
 #prototipos de mierda 
+
+# TAREA 
+CRAER UNA LISTA CON 10 OBJETOS QUE CONTENGAN LOS DATOS DE LAS TIENDAS COMERCIALES
+
+> EJEMPLO:
+ ```python 
+ tiendas=[
+    {
+        "nombre":"mecha",
+        "categoria":["abaroteria"],
+        "horario":{
+            "dia": 7am-12m,
+            "tarde":2pm-8pm
+        }
+
+        "gerente": "manuela"
+
+           }
+]
+```
+### observacion:  categorias seran 4
+### OBSERVACION: Los gerente seran los siguiente: Edwin, Cristian, Nadine, China
+## realizar los siguiente ejercicios:
+1. crear un metodo que filtre las tiendas que tienen cada gerente.
+2. crear un metodo que se muestre los negocios que tienen mas de dos categorias. **(1 y 2 con lambda)**
+3. crear un metodo que me muestre solo el nombre de las tiendas y ruc. **(hacer con map)**
+
+crear una clase para las siguientes metodos o casos de uso.
