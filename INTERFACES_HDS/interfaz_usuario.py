@@ -1,5 +1,4 @@
-from tkinter import * # * sirve para importar todos las herramientas de tk
-
+from tkinter import * 
 
 def evaluar_datos():
     
