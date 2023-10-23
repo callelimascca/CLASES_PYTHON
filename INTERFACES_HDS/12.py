@@ -3,7 +3,7 @@ from tkinter import *
 def calcular_promedio():
     
     nota = float(nota_text.get())
-    promedio = (nota + float(E_promedio["text"]))/ 6
+    promedio = (nota + float(E_promedio["text"]))/ 4
     E_promedio["text"]= promedio
 
 def limpiar():
