@@ -1,6 +1,15 @@
 from tarea import *
 
 class Tiendas_comerciales:
+
+          def mostrar_todo(self,tarea_tiendas):
+          mensaje=f"""
+    TIENES {len(tarea_tiendas)} TIENDAS COMERCIALES
+    LAS TIENDAS SON: 
+    {tarea_tiendas}
+"""
+          return mensaje
+     
      def tienda_gerente(self, tarea_tiendas,nombre_gerente):
           rpt=list(filter(lambda e:e ["Gerente"]==nombre_gerente,tarea_tiendas))
           return f" Las tiendas pertenecientes a China son:  {rpt}"
@@ -20,13 +29,6 @@ class Tiendas_comerciales:
           """
           
      
-     def mostrar_todo(self,tarea_tiendas):
-          mensaje=f"""
-    TIENES {len(tarea_tiendas)} TIENDAS COMERCIALES
-    LAS TIENDAS SON: 
-    {tarea_tiendas}
-"""
-          return mensaje
      
 rpts=Tiendas_comerciales()
 print(rpts.mostrar_todo(tiendas))
