@@ -1,7 +1,7 @@
 tiendas=[
     {
         "Nombre": "Tienda 1",
-        "RUC": "12335-35453",
+        "RUC": 2134354,
         "Gerente": "Edwin",
         "Categoria": ["abarrotes","bodega"],
         "Horario_atencion":{
@@ -12,7 +12,7 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 2",
-        "RUC": "12335-35453",
+        "RUC": 5456456,
         "Gerente": "Edwin",
         "Categoria": ["abarrotes","farmacia"],
         "Horario_atencion":{
@@ -23,9 +23,9 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 3",
-        "RUC": "12335-35453",
+        "RUC": 4546776876,
         "Gerente": "Nadine",
-        "Categoria": ["abarrotes","bodega"],
+        "Categoria": ["abarrotes"],
         "Horario_atencion":{
             "dia": "7 am - 12 m",
             "tarde": "2 pm - 8 pm"
@@ -34,9 +34,9 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 4",
-        "RUC": "12335-3534",
+        "RUC": 7687989,
         "Gerente": "Cristian",
-        "Categoria": ["farmacia", "abarrotes"],
+        "Categoria": ["farmacia"],
         "Horario_atencion":{
             "dia": "7 am - 12 m",
             "tarde": "2 pm - 8 pm"
@@ -45,9 +45,9 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 5",
-        "RUC": "12335-35453",
+        "RUC": 234651120,
         "Gerente": "China",
-        "Categoria": ["farmacia","abarrotes"],
+        "Categoria": ["farmacia","restaurant"],
         "Horario_atencion":{
             "dia": "7 am - 12 m",
             "tarde": "2 pm - 8 pm"
@@ -56,9 +56,9 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 6",
-        "RUC": "1235-37653",
+        "RUC":4572852,
         "Gerente": "Nadinde",
-        "Categoria": ["abarrotes","bodega"],
+        "Categoria": ["bodega"],
         "Horario_atencion":{
             "dia": "7 am - 12 m",
             "tarde": "2 pm - 8 pm"
@@ -67,9 +67,9 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 7",
-        "RUC": "12335-35453",
+        "RUC": 23424345,
         "Gerente": "Edwin",
-        "Categoria": ["abarrotes","bodega"],
+        "Categoria": ["restaurant"],
         "Horario_atencion":{
             "dia": "7 am - 12 m",
             "tarde": "2 pm - 8 pm"
@@ -78,7 +78,7 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 8",
-        "RUC": "12335-38753",
+        "RUC": 5656786789,
         "Gerente": "China",
         "Categoria": ["bodega","farmacia"],
         "Horario_atencion":{
@@ -89,7 +89,7 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 9",
-        "RUC": "12335-35454",
+        "RUC": 3436665,
         "Gerente": "China",
         "Categoria": ["abarrotes","bodega"],
         "Horario_atencion":{
@@ -100,9 +100,9 @@ tiendas=[
     },
     {
         "Nombre": "Tienda 10",
-        "RUC": "12335-35453",
+        "RUC": 57687676,
         "Gerente": "Cristian",
-        "Categoria": ["abarrotes","bodega","farmacia"],
+        "Categoria": ["abarrotes","bodega","farmacia","restaurant"],
         "Horario_atencion":{
             "dia": "7 am - 12 m",
             "tarde": "2 pm - 8 pm"
@@ -111,11 +111,5 @@ tiendas=[
     }
 ]
 
-class Tienda:
            
-    def __init__(self,nombre,ruc,gerente,categoria,horario_atencion="dia: 7 am - 12 m,tarde: 2 pm - 8 pm"):
-        self.nombre=nombre
-        self.ruc=ruc
-        self.gerente=gerente
-        self.categoria=categoria
-        self.horario_atencion=horario_atencion
+    
