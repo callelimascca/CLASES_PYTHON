@@ -1,7 +1,7 @@
 tiendas=[
     {
-        "Nombre": "Tienda 1",
         "RUC": 2134354,
+        "Nombre": "Tienda 1",
         "Gerente": "Edwin",
         "Categoria": ["abarrotes","bodega"],
         "Horario_atencion":{
@@ -11,8 +11,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 2",
         "RUC": 5456456,
+        "Nombre": "Tienda 2",
         "Gerente": "Edwin",
         "Categoria": ["abarrotes","farmacia"],
         "Horario_atencion":{
@@ -22,8 +22,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 3",
         "RUC": 4546776876,
+        "Nombre": "Tienda 3",
         "Gerente": "Nadine",
         "Categoria": ["abarrotes"],
         "Horario_atencion":{
@@ -33,8 +33,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 4",
         "RUC": 7687989,
+        "Nombre": "Tienda 4",
         "Gerente": "Cristian",
         "Categoria": ["farmacia"],
         "Horario_atencion":{
@@ -44,8 +44,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 5",
         "RUC": 234651120,
+        "Nombre": "Tienda 5",
         "Gerente": "China",
         "Categoria": ["farmacia","restaurant"],
         "Horario_atencion":{
@@ -55,8 +55,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 6",
         "RUC":4572852,
+        "Nombre": "Tienda 6",
         "Gerente": "Nadinde",
         "Categoria": ["bodega"],
         "Horario_atencion":{
@@ -66,8 +66,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 7",
         "RUC": 23424345,
+        "Nombre": "Tienda 7",
         "Gerente": "Edwin",
         "Categoria": ["restaurant"],
         "Horario_atencion":{
@@ -77,8 +77,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 8",
         "RUC": 5656786789,
+        "Nombre": "Tienda 8",
         "Gerente": "China",
         "Categoria": ["bodega","farmacia"],
         "Horario_atencion":{
@@ -88,8 +88,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 9",
         "RUC": 3436665,
+        "Nombre": "Tienda 9",
         "Gerente": "China",
         "Categoria": ["abarrotes","bodega"],
         "Horario_atencion":{
@@ -99,8 +99,8 @@ tiendas=[
 
     },
     {
-        "Nombre": "Tienda 10",
         "RUC": 57687676,
+        "Nombre": "Tienda 10",
         "Gerente": "Cristian",
         "Categoria": ["abarrotes","bodega","farmacia","restaurant"],
         "Horario_atencion":{
