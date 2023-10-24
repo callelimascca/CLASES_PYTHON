@@ -3,7 +3,7 @@ from tkinter import*
 def eval():
     us=user.get()
     cr=int(contra.get())
-    if cr ==12345678:
+    if cr ==2023:
         mensaje=Label(ventana,text=f'''
         Hola usuario {us}, 
         la contraseña es correcta.
