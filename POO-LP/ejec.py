@@ -48,7 +48,7 @@ class Tiendas_comerciales:
           registrar=tiendas.append(tienda_nueva)
           return f""" LA TIENDA SE REGISTRO CON EXITO:
 ===================================================================================
-          {tienda_nueva}"""
+{tienda_nueva}"""
      
      def actualizar_horario(self, ruc, clave, valor):
           tiendas[ruc -1][clave] = valor 
@@ -67,10 +67,10 @@ rpts=Tiendas_comerciales()
 # print(rpts.ruc_nombre(tiendas))
 # print(rpts.eliminar_tienda(tiendas, 5456456))
 # print(rpts.actualizacion(tiendas))
-# print(rpts.registrar_tienda(1237456,"Tienda 11",["Bodega", "farmacia"],{"dia":"7am-12m", "tarde":"2pm-7pm"},"LUNA"))
-#print(rpts.mostrar_todo(tiendas))
-print(rpts.actualizar_horario(1,"Horario_atencion",{
-            "dia": "6 am - 11 am",
-            "tarde": "1 pm - 7 pm"
-        }))
-print(rpts.mostrar_todo(tiendas))
+print(rpts.registrar_tienda(1237456,"Tienda 11",["Bodega", "farmacia"],{"dia":"7am-12m", "tarde":"2pm-7pm"},"LUNA"))
+# print(rpts.mostrar_todo(tiendas))
+# print(rpts.actualizar_horario(1,"Horario_atencion",{
+#             "dia": "6 am - 11 am",
+#             "tarde": "1 pm - 7 pm"
+#         }))
+# print(rpts.mostrar_todo(tiendas))
