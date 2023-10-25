@@ -28,14 +28,14 @@ class Tiendas_comerciales:
      def eliminar_tienda(self,tarea_tiendas, ruc):
           rps=list(filter(lambda e:e ["RUC"] != ruc, tarea_tiendas))
           return f""" La tienda fue eliminado:
-==========================================================================
+==========================================================================================================================================================================================================================
 {rps}
           """
 
      def actualizacion(self,tarea_tiendas):
           actualizar=list(filter(lambda a:{"RUC":a["RUC"],"Nombre":a["Nombre"]},tarea_tiendas))
           return f"""SE ACTUALIZO CON EXITO
-============================================================================================================================================================
+============================================================================================================================================================================================================================
 
 {actualizar} """
 
@@ -50,7 +50,8 @@ class Tiendas_comerciales:
           }
           registrar=tiendas.append(tienda_nueva)
           return f""" LA TIENDA SE REGISTRO CON EXITO:
-===================================================================================
+===================================================================================================================================================================================================================================
+
 {tienda_nueva}"""
      
      def actualizar_horario(self, ruc, clave, valor):
@@ -68,13 +69,14 @@ rpts=Tiendas_comerciales()
 # print(rpts.tienda_gerente(tiendas, "China"))
 # print(rpts.mas_categoria(tiendas))
 # print(rpts.ruc_nombre(tiendas))
-# print(rpts.eliminar_tienda(tiendas, 5456456))
+print(rpts.eliminar_tienda(tiendas, 5456456))
 # print(rpts.actualizacion(tiendas))
 # print(rpts.registrar_tienda(1237456,"Tienda 11",["Bodega", "farmacia"],{"dia":"7am-12m", "tarde":"2pm-7pm"},"LUNA"))
 # print(rpts.actualizacion(tiendas))
 # print(rpts.mostrar_todo(tiendas))
-print(rpts.actualizar_horario(1,"Horario_atencion",{
-            "dia": "6 am - 11 am",
-            "tarde": "1 pm - 7 pm"
-        }))
-print(rpts.mostrar_todo(tiendas))
+# print(rpts.actualizar_horario(1,"Horario_atencion",{
+#             "dia": "6 am - 11 am",
+#             "tarde": "1 pm - 7 pm"
+#         }))
+# print(rpts.mostrar_todo(tiendas))
+
