@@ -1,5 +1,6 @@
 tiendas=[
     {
+        "id": 1,
         "RUC": 2134354,
         "Nombre": "Tienda 1",
         "Gerente": "Edwin",
