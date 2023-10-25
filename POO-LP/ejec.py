@@ -62,6 +62,3 @@ rpts=Tiendas_comerciales()
 #print(rpts.mostrar_todo(tiendas))
 print(rpts.actualizar_horario(tiendas,2134354,{"dia":"6am-12m", "tarde":"3pm-8pm"}))
 print(rpts.mostrar_todo(tiendas))
-
-
-
