@@ -22,7 +22,7 @@ def agregar_nota():
 
 # Crear la ventana
 ventana = Tk()
-ventana.title("♥♦☺")
+ventana.title("☻♣◙")
 
 # Crear las etiquetas
 notas=Label(ventana, text="Nota")
