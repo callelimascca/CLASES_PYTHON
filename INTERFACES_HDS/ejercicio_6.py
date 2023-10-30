@@ -36,7 +36,7 @@ def calcular():
     else:
         resultado = "operacion no valida"
         
-    rpta.config(text= "TOTAL: " + str (resultado))
+    rpta.config(text= " " + str (resultado))
     
 
 num_1=Label(ventana, text="Ingresa un numero")
@@ -49,8 +49,10 @@ num_2.grid(row=2,column=0)
 num2_text =Entry(ventana)
 num2_text.grid(row=3,column=0)
 
+rpt=Label(ventana,text="TOTAL")
+rpt.grid(row=4,column=0)
 rpta=Label(ventana, text="0")
-rpta.grid(row=4,column=0)
+rpta.grid(row=5,column=0)
 
 
 rpts= IntVar()
