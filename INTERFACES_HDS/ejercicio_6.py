@@ -13,8 +13,8 @@ class Calculadora:
 
     def mult(self, num1, num2):
         return num1 * num2
-
-
+    
+    
     def divi(self, num1, num2):
         return num1 / num2
 

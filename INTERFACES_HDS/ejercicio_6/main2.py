@@ -1,56 +1,116 @@
-from  tkinter import *
+from tkinter import *
+class Operaciones:
 
-class Calculadora:
     def __init__(self):
-        self.ventana= Tk()
-        self.ventana.title("CALCULADORA")
-        self.num1=IntVar()
-        self.num2=IntVar()
-        self.resultado=IntVar()
-        self.operacion= IntVar()
+        self.ventana=Tk()
+        self.ventana.geometry("290x220")
+        self.ventana.title("Operaciones Aritmeticas")
 
+# radiobuttons
 
-        self.radio_suma=Radiobutton(self.ventana,text="Suma",value="+",variable=self.operacion)
-        self.radio_resta=Radiobutton(self.ventana,tex="Resta",value="-",variable=self.operacion)
-        self.radio_mult=Radiobutton(self.ventana,text="Multiplicacion",value="*",variable=self.operacion)
-        self.radio_divi=Radiobutton(self.ventana,text="Division",value="/",variable=self.operacion)
+        self.info=IntVar()
 
+        self.radio_sumar=Radiobutton(self.ventana,text="Suma",value=0,variable=self.info)
+        self.radio_sumar.grid(row=2,column=3)
 
-        self.num1= Entry(self.ventana,textvariable=self.num1)
-        self.num2= Entry(self.ventana, textvariable= self.num2)
+        self.radio_resta=Radiobutton(self.ventana,text="Resta",value=1,variable=self.info)
+        self.radio_resta.grid(row=4,column=3)
 
-        self.resultado=Label(self.ventana,textvariable=self.resultado)
+        self.radio_multi=Radiobutton(self.ventana,text="Multiplicar",value=2,variable=self.info)
+        self.radio_multi.grid(row=6,column=3)
+    
+        self.radio_divi=Radiobutton(self.ventana,text="Dividir",value=3,variable=self.info)
+        self.radio_divi.grid(row=8,column=3)
 
-        self.boton=Button(self.ventana, text="Calcular", command= self.calcular)
+# widget invisibles
 
-        self.num1.pack()
-        self.num2.pack()
-        self.radio_suma.pack()
-        self.radio_resta.pack()
-        self.radio_mult.pack()
-        self.radio_divi.pack()
-        self.boton.pack()
-        self.resultado.pack()
+        invisible=Label(self.ventana,text="  ")
+        invisible.grid(row=0,rowspan=11,column=0)
 
-        self.ventana.mainloop()
+        invisible_1=Label(self.ventana,text="",font=("Helvetica",1))
+        invisible_1.grid(row=0,column=1)
 
-    def calcular(self):
-        num1 = int(self.num1.get())
-        num2 = int(self.num2.get())
-        operacion = self.operacion.get()
+        invisible_2=Label(self.ventana,text="  ")
+        invisible_2.grid(row=0,rowspan=11,column=4)
 
-        if operacion == "+":
-                 resultado = num1 + num2
-        elif operacion == "-":
-                resultado = num1 - num2
-        elif operacion == "*":
-                resultado = num1 * num2
-        elif operacion == "/":
-                resultado = num1/ num2
-        self.resultado.set(resultado)
+        invisible_3=Label(self.ventana,text="",font=("Helvetica",1))
+        invisible_3.grid(row=3,column=1)
 
-calculadora=Calculadora()           
-      
+        invisible_4=Label(self.ventana,text="",font=("Helvetica",1))
+        invisible_4.grid(row=6,column=1)
+
+        invisible_5=Label(self.ventana,text="",font=("Helvetica",1))
+        invisible_5.grid(row=9,column=1)
+
+        invisible_6=Label(self.ventana,text="",font=("Helvetica",1))
+        invisible_6.grid(row=11,column=1)
+
+        invisible_7=Label(self.ventana,text="             ")
+        invisible_7.grid(row=0,rowspan=11,column=2)  
+
+# widget de texto
+
+        frame=Label(self.ventana,text="Ingrese un numero")
+        frame.grid(row=1,column=1)
+
+        frame_1=Label(self.ventana,text="Ingrese un numero")
+        frame_1.grid(row=4,column=1)
+
+        frame_2=Label(self.ventana,text="Total")
+        frame_2.grid(row=7,column=1)
+
+# cuadros de texto
+    
+        self.cuadro_text=Entry(self.ventana)
+        self.cuadro_text.config(bg="red",fg="white")
+        self.cuadro_text.grid(row=2,column=1)
+
+        self.cuadro_text1=Entry(self.ventana)
+        self.cuadro_text1.config(bg="red",fg="white")
+        self.cuadro_text1.grid(row=5,column=1)
+
+        self.cuadro_text2=Entry(self.ventana)
+        self.cuadro_text2.config(bg="Yellow",fg="black")
+        self.cuadro_text2.grid(row=8,column=1)
+  
+# botones
+
+        self.boton_calcular=Button(self.ventana,text="Calcular",command=self.realizar_operacion)
+        self.boton_calcular.grid(row=10,column=1)
+
+        self.boton_limpiar=Button(self.ventana,text="Limpiar",command=self.limpiar_dato)
+        self.boton_limpiar.grid(row=10,column=3)
+
+# FUNCIONES
+
+    def realizar_operacion(self):
+         numero1=float(self.cuadro_text.get())
+         numero2=float(self.cuadro_text1.get())
+         operacion=self.info.get()
+
+         if operacion == 0:  # Suma
+            resultado = numero1 + numero2
+         elif operacion == 1:  # Resta
+            resultado = numero1 - numero2
+         elif operacion == 2:  # Multiplicación
+            resultado = numero1 * numero2
+         elif operacion == 3:  # División
+            if numero2 != 0:  # Evitar división por cero
+                resultado = numero1 / numero2
+            else:
+                resultado = "División por cero no permitida"
+
+         self.cuadro_text2.delete(0, "end")
+         self.cuadro_text2.insert(0, resultado)
+
+    def limpiar_dato(self):
+        self.cuadro_text.delete(0, "end")
+        self.cuadro_text1.delete(0, "end")
+        self.cuadro_text2.delete(0, "end")
+
+if __name__=="__main__":
+        app=Operaciones()
+        app.ventana.mainloop()
 
 
 
