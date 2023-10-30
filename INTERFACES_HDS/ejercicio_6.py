@@ -1,12 +1,28 @@
 from tkinter import *
 
 seleccion=IntVar()
+class Calculadora:
 
-def calcular():
-    n1=int(num1_text.get())
-    n2=int(num2_text.get())
-    resultado= n1 + n2
-    pass
+    def suma():
+        num1=int(num1_text.get())
+        num2=int(num2_text.get())
+        resultado = num1 + num2
+
+    def resta():
+        num1=int(num1_text.get())
+        num2=int(num2_text.get())
+        resultado = num1 - num2
+
+    def mult():
+        num1=int(num1_text.get())
+        num2=int(num2_text.get())
+        resultado = num1 * num2
+
+    def divi():
+        num1=int(num1_text.get())
+        num2=int(num2_text.get())
+        resultado = num1 / num2
+
 
 
 ventana=Tk()
@@ -22,17 +38,22 @@ num_2.pack()
 num2_text =Entry(ventana)
 num2_text.pack()
 
-num_3=Label(ventana, text="Total")
-num_3.pack()
-num3_text =Entry(ventana)
-num3_text.pack()
+tl=Label(ventana, text="Total")
+tl.pack()
+text_tl =Entry(ventana)
+text_tl.pack()
 
-rb_s=Radiobutton(ventana,text="Suma",value="Sumar",variable=seleccion)
+rb_s=Radiobutton(ventana,text="Suma",value="+",variable=seleccion)
 rb_s.pack()
-rb_r=Radiobutton(ventana,text="Resta",value="Restar",variable=seleccion)
+rb_r=Radiobutton(ventana,text="Resta",value="-",variable=seleccion)
 rb_r.pack()
+rb_m=Radiobutton(ventana,text="Multiplicacion",value="*",variable=seleccion)
+rb_m.pack()
+rb_d=Radiobutton(ventana,text="Division",value="/",variable=seleccion)
+rb_d.pack()
 
-boton_calcular =Button(ventana, text="Calcular", command=calcular)
+
+boton_calcular =Button(ventana, text="Calcular", command=Calculadora)
 boton_calcular.pack()
 
 ventana.mainloop()
