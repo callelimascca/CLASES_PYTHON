@@ -51,8 +51,8 @@ num2_text.grid(row=3,column=0)
 
 rpt=Label(ventana, text="Total")
 rpt.grid(row=4,column=0)
-rpta =Label(ventana,text="Resultado: ")
-rpta.grid(row=5, column= 1)
+rpta =Label(ventana,text="0")
+rpta.grid(row=4, column= 1)
 
 rpts= IntVar()
 
@@ -69,14 +69,12 @@ rb_d.grid(row=5,column=1)
 boton_calcular =Button(ventana, text="Calcular", command=calcular)
 boton_calcular.grid(row=7,column=0)
 
-
-
-
-# def limpiar():
-#     num_1.delete(0,END)
-#     num_2.delete(0,END)
-#     tl.delete(0,END)
-#     num_1.focus()
-# boton_limpiar=Button(ventana,text='Limpiar',command=limpiar).grid(row=7,column=1)
+def limpiar():
+    num1_text.delete(0,END)
+    num2_text.delete(0,END)
+    rpta [rpta] = 0
+    num_1.focus()
+    
+boton_limpiar=Button(ventana,text='Limpiar',command=limpiar).grid(row=7,column=1)
 
 ventana.mainloop()
