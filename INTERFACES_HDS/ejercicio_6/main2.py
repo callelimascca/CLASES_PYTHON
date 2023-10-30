@@ -49,7 +49,7 @@ class Calculadora:
                 resultado = num1/ num2
         self.resultado.set(resultado)
 
-Calculadora()           
+calculadora=Calculadora()           
       
 
 
