@@ -36,7 +36,7 @@ def calcular():
     else:
         resultado = "operacion no valida"
         
-    rpt.config(text= "Resultado: " + str (resultado))
+    rpta.config(text= "TOTAL: " + str (resultado))
     
 
 num_1=Label(ventana, text="Ingresa un numero")
@@ -49,10 +49,9 @@ num_2.grid(row=2,column=0)
 num2_text =Entry(ventana)
 num2_text.grid(row=3,column=0)
 
-rpt=Label(ventana, text="Total")
-rpt.grid(row=4,column=0)
-rpta =Label(ventana,text="0")
-rpta.grid(row=4, column= 1)
+rpta=Label(ventana, text="0")
+rpta.grid(row=4,column=0)
+
 
 rpts= IntVar()
 
@@ -72,7 +71,7 @@ boton_calcular.grid(row=7,column=0)
 def limpiar():
     num1_text.delete(0,END)
     num2_text.delete(0,END)
-    rpta [rpta] = 0
+    rpta ["text"] = 0
     num_1.focus()
     
 boton_limpiar=Button(ventana,text='Limpiar',command=limpiar).grid(row=7,column=1)
