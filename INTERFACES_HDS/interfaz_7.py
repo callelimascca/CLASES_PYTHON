@@ -5,9 +5,14 @@ root.title("Calculadora básica")
 result = StringVar()
 entry = Entry(root, textvariable=result)
 entry.grid(row=0, column=0, columnspan=4, padx=5, pady=5)
+entry.config(bg = "#87E5F0")
 def add_number(number):
     current = result.get()
     result.set(current + number)
+
+def borrar():
+	entry.delete(0, END)
+
     
 button1 = Button(root, text="1", command=lambda:add_number("1"))
 button2 = Button(root, text="2", command=lambda:add_number("2"))
@@ -24,6 +29,7 @@ button_minus = Button(root, text="-", command=lambda:add_number("-"))
 button_multiply = Button(root, text="*", command=lambda:add_number("*"))
 button_divide = Button(root, text="/", command=lambda:add_number("/"))
 button_equals = Button(root, text="=", command=lambda:result.set(eval(result.get())))
+boton_borrar = Button(root, text = "AC", width= 10, height = 1, command = lambda: borrar())
 
 button7.grid(row=1, column=0, padx=5, pady=5)
 button8.grid(row=1, column=1, padx=5, pady=5)
@@ -40,6 +46,7 @@ button_minus.grid(row=3, column=3, padx=5, pady=5)
 button0.grid(row=4, column=0, padx=5, pady=5)
 button_equals.grid(row=4, column=1, columnspan=2, padx=5, pady=5)
 button_plus.grid(row=4, column=3, padx=5, pady=5)
+boton_borrar.grid(row=5, column =0, columnspan=4)
 root.mainloop()
 
 
