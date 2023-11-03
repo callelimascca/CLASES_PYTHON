@@ -1,6 +1,7 @@
 from tkinter import *
 ventana = Tk() 
 ventana.title("Calculadora básica")
+ventana.config(bg="#54ABC2")
 
 result = StringVar()
 entry = Entry(ventana, textvariable=result)
@@ -29,7 +30,7 @@ button_resta = Button(ventana, text="-", command=lambda:add_number("-"))
 button_multiplicar = Button(ventana, text="*", command=lambda:add_number("*"))
 button_divide = Button(ventana, text="/", command=lambda:add_number("/"))
 button_igual = Button(ventana, text="=", command=lambda:result.set(eval(result.get())))
-boton_borrar = Button(ventana, text = "AC", width= 10, height = 1, command = lambda: borrar())
+boton_borrar = Button(ventana, text = "CLEAR", width= 10, height = 1, command = lambda: borrar())
 
 button7.grid(row=1, column=0, padx=5, pady=5)
 button8.grid(row=1, column=1, padx=5, pady=5)
