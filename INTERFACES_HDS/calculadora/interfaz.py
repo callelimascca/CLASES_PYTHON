@@ -32,12 +32,12 @@ boton_8=Button(root,text="8",width=9,height=3,bg="white", fg="#402FEF",borderwid
 boton_9=Button(root,text="9",width=9,height=3,bg="white", fg="#402FEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton(9,pantalla)).grid(row=3, column=2, padx=1, pady=1)
 boton_0=Button(root,text="0",width=9,height=3,bg="#E8D7F0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton(0,pantalla)).grid(row=4, column=1, padx=1, pady=1)
 boton_igual=Button(root,text="=",width=9,height=3,bg="#DED7F0", fg="#402FEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("=",pantalla)).grid(row=4, column=0, padx=1, pady=1)
-boton_punto=Button(root,text=".",width=9,height=3,bg="#E8D7F0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton(".",pantalla)).grid(row=4, column=2, padx=1, pady=1)
+boton_punto=Button(root,text=".",width=7,height=3,bg="#E8D7F0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton(".",pantalla)).grid(row=4, column=2, padx=1, pady=1)
 
 #boton de operaciones
-boton_suma=Button(root,text="+",width=9,height=3,bg="#94FFF0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("+",pantalla)).grid(row=1, column=3, padx=1, pady=1)
-boton_resta=Button(root,text="-",width=9,height=3,bg="#94FFF0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("-",pantalla)).grid(row=2, column=3, padx=1, pady=1)
-boton_multiplicacion=Button(root,text="*",width=9,height=3,bg="#94FFF0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("*",pantalla)).grid(row=3, column=3, padx=1, pady=1)
-boton_division=Button(root,text="/",width=9,height=3,bg="#94FFF0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("/",pantalla)).grid(row=4, column=3, padx=1, pady=1)
+boton_suma=Button(root,text="+",width=7,height=3,bg="#94FFF0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("+",pantalla)).grid(row=1, column=3, padx=1, pady=1)
+boton_resta=Button(root,text="-",width=7,height=3,bg="#94FFF0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("-",pantalla)).grid(row=2, column=3, padx=1, pady=1)
+boton_multiplicacion=Button(root,text="*",width=7,height=3,bg="#94FFF0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("*",pantalla)).grid(row=3, column=3, padx=1, pady=1)
+boton_division=Button(root,text="/",width=7,height=3,bg="#94FFF0", fg="#1A4CEF",borderwidth=0,cursor="hand2",font=fuente_general,command=lambda:enviar_boton("/",pantalla)).grid(row=4, column=3, padx=1, pady=1)
 
 root.mainloop()
