@@ -82,4 +82,3 @@ print(prod.mostrar_productos())
 # print(prod.mostrar_productos())
 print(prod.actualizar_producto("2023-B","CODIGO","CUALQUIER COSA"))
 print(prod.mostrar_productos()) 
-
