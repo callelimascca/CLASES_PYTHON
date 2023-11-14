@@ -8,13 +8,14 @@ class InterfazCalculadora(Tk):
         super().__init__()
         self.configura_ventana()
         self.construir_widget()
+        self.boton_cambio_tema()
 
     def configura_ventana(self):
         self.title('CALCULADORA♥')
         #color de fondo
         self.configure(bg=cons.COLOR_FONDO_NEGRO)
         #que no pueda escalar
-        self.resizable(0,0)
+        #self.resizable(0,0)
         #propiedad para darle transparencia
         self.attributes('-alpha', 0.96)
         #llamar a la funcion centrar ventana
@@ -58,3 +59,8 @@ class InterfazCalculadora(Tk):
             if col_ini >3:
                 col_ini=0
                 row_ini+=1
+    def boton_cambio_tema(self):
+        self.tema_oscuro=True
+        font_icono=font.Font(family="FontAwesone",size=12)
+        self.boton_tema=Button(self,text="Modo oscuro \uf186",width=13,font=font_icono,bd=0,borderwidth=0,highlightthickness=0,relief=FLAT,bg=cons.COLOR_BOTONES_ESPECIAL_LIGHT,command=lambda:cambio_tema(self,cons))
+        self.boton_tema.grid(row=0,column=0,columnspan=2,padx=0,pady=0,sticky="nw")
