@@ -1,6 +1,7 @@
 from tkinter import*
 from tkinter import font
 import config as cons
+from funciones import *
 
 class InterfazCalculadora(Tk):
     def __init__(self):
@@ -25,13 +26,13 @@ class InterfazCalculadora(Tk):
         self.operacion_label=Label(self,text='',font=('Arial',16),fg=cons.COLOR_TEXTO_NEGRO,bg=cons.COLOR_FONDO_NEGRO,justify='right')
         self.operacion_label.grid(row=0,column=3,padx=10,pady=10)
 
-    #caja de texto donde se muestra los numero ingresados
+        #caja de texto donde se muestra los numero ingresados
         self.caja_operaciones=Entry(self,width=12,font=('Arial',40),bd=0,fg=cons.COLOR_TEXTO_NEGRO,bg=cons.COLOR_FONDO_NEGRO,justify='right')
         self.caja_operaciones.grid(row=1,column=0,columnspan=4,padx=10,pady=10)
 
         #creado botones
         botones=[
-            'c','%','<','/',
+            'C','%','<','/',
             '7','8','9','*',
             '4','5','6','-',
             '1','2','3','+',
@@ -49,10 +50,10 @@ class InterfazCalculadora(Tk):
                 color_fondo=cons.COLOR_BOTONES_NEGRO
                 boton_font=robot_font
             if boton == '=':
-                Button(self,text=boton,width=11,height=2,bg=color_fondo,fg=cons.COLOR_TEXTO_NEGRO,relief=FLAT,font=boton_font,padx=5,pady=5,bd=0,borderwidth=0,highlightthickness=0,overrelief='flat',).grid(row=row_ini,column=col_ini,columnspan=2,pady=5)
+                Button(self,command=lambda b=boton:enviar_boton(self,b),text=boton,width=11,height=2,bg=color_fondo,fg=cons.COLOR_TEXTO_NEGRO,relief=FLAT,font=boton_font,padx=5,pady=5,bd=0,borderwidth=0,highlightthickness=0,overrelief='flat',).grid(row=row_ini,column=col_ini,columnspan=2,pady=5)
                 col_ini += 1
             else:
-                Button(self,text=boton,width=5,height=2,bg=color_fondo,fg=cons.COLOR_TEXTO_NEGRO,relief=FLAT,font=boton_font,padx=5,pady=5,bd=0,borderwidth=0,highlightthickness=0,overrelief='flat',).grid(row=row_ini,column=col_ini,pady=5)
+                Button(self,command=lambda b=boton:enviar_boton(self,b),text=boton,width=5,height=2,bg=color_fondo,fg=cons.COLOR_TEXTO_NEGRO,relief=FLAT,font=boton_font,padx=5,pady=5,bd=0,borderwidth=0,highlightthickness=0,overrelief='flat',).grid(row=row_ini,column=col_ini,pady=5)
                 col_ini += 1
             if col_ini >3:
                 col_ini=0
