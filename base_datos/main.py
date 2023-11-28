@@ -62,7 +62,7 @@ def actualizarAlumno(id_alumno, nuevo_nombre, nueva_edad):
     conn = connect("./Base_datos/tecnologico.db")
     cursor = conn.cursor()
 
-    # Assuming you have columns 'nombre' and 'edad' in your 'Alumnos' table
+ 
     sentencia = f"UPDATE Alumnos SET nombre = ?, edad = ? WHERE id = ?"
     data = (nuevo_nombre, nueva_edad, id_alumno)
 
@@ -74,7 +74,7 @@ def eliminarAlumnoPorID(id_alumno):
     conn = connect("./Base_datos/tecnologico.db")
     cursor = conn.cursor()
 
-    # Assuming you have a table named 'Alumnos' with a column 'id'
+
     sentencia = "DELETE FROM Alumnos WHERE id = ?"
     data = (id_alumno,)
 
