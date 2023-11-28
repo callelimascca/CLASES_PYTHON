@@ -95,11 +95,11 @@ if __name__=="__main__":
     #     ("viuda negra",300)
     # ]
     # insertAlumnos(alum)
-    # id_alumno_a_actualizar = 1  # Replace with the actual ID of the student you want to update
+    # id_alumno_a_actualizar = 1  
     # nuevo_nombre = "Nuevo Nombre"
     # nueva_edad = 25
 
     # actualizarAlumno(id_alumno_a_actualizar, nuevo_nombre, nueva_edad)
-    id_alumno_a_eliminar = 25 # Replace with the actual ID of the student you want to delete
+    id_alumno_a_eliminar = 25 
 
     eliminarAlumnoPorID(id_alumno_a_eliminar)
