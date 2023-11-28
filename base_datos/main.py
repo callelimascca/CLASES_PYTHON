@@ -37,7 +37,7 @@ if __name__=="__main__":
     # crearTablaAlumnos()
     crearTablaCursos()
 
-def insertAlumno(nombre,edad):
+def insertarAlumno(nombre,edad):
     conn=connect("./base_datos/tecnologico.db")
     cursor=conn.cursor()
     sentencia=f"INSERT INTO Alumnos(nombre,edad) VALUES ('{nombre}',{edad})"
@@ -47,24 +47,59 @@ def insertAlumno(nombre,edad):
 if __name__=="__main__":
     # # crearTablaAlumnos()
     # crearTablaCursos()
-    insertAlumno('Jory', 20)
-    insertAlumno('China', 20)
-def insertAlumno(nombre,edad):
+    insertarAlumno('Jory', 20)
+    insertarAlumno('China', 20)
+
+def insertAlumno(lista):
     conn=connect("./base_datos/tecnologico.db")
     cursor=conn.cursor()
     sentencia=f"INSERT INTO Alumnos(nombre,edad) VALUES (?,?)"
     cursor.executemany(sentencia,lista)
     conn.commit()
     conn.close()
+
+def actualizarAlumno(id_alumno, nuevo_nombre, nueva_edad):
+    conn = connect("./Base_datos/tecnologico.db")
+    cursor = conn.cursor()
+
+    # Assuming you have columns 'nombre' and 'edad' in your 'Alumnos' table
+    sentencia = f"UPDATE Alumnos SET nombre = ?, edad = ? WHERE id = ?"
+    data = (nuevo_nombre, nueva_edad, id_alumno)
+
+    cursor.execute(sentencia, data)
+    conn.commit()
+    conn.close()
+
+def eliminarAlumnoPorID(id_alumno):
+    conn = connect("./Base_datos/tecnologico.db")
+    cursor = conn.cursor()
+
+    # Assuming you have a table named 'Alumnos' with a column 'id'
+    sentencia = "DELETE FROM Alumnos WHERE id = ?"
+    data = (id_alumno,)
+
+    cursor.execute(sentencia, data)
+    conn.commit()
+    conn.close()
+
 if __name__=="__main__":
-    # crearTablaAlumnos()
-    # crearTablaCursos()
-    # insertAlumno('Jory', 20)
-    # insertAlumno('China', 20)
-    alum=[
-        ('jory',50)
-        ('china',19)
-        ('nadine',18)
-        ('mochi',23)
-    ]
-    insertAlumno(alum)
+    # crearConexion()
+    # crearTablaAlumno()
+    # crearTablaCurso()
+    # insertarAlumno("jory",20)
+    # insertarAlumno("chinita",12)
+    # alum=[
+    #     ("jorycha",50),
+    #     ("chinita",60),
+    #     ("nidincita",18),
+    #     ("viuda negra",300)
+    # ]
+    # insertAlumnos(alum)
+    # id_alumno_a_actualizar = 1  # Replace with the actual ID of the student you want to update
+    # nuevo_nombre = "Nuevo Nombre"
+    # nueva_edad = 25
+
+    # actualizarAlumno(id_alumno_a_actualizar, nuevo_nombre, nueva_edad)
+    id_alumno_a_eliminar = 25 # Replace with the actual ID of the student you want to delete
+
+    eliminarAlumnoPorID(id_alumno_a_eliminar)
