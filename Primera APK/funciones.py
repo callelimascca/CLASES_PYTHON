@@ -23,7 +23,7 @@ def nuevo(ventana):
         "Celular":celular
     }
     db.insertarUno('Usuarios',date)
-    showinfo(title='save', message='nuevo registro agregado')
+    showinfo(title='Guardar', message='nuevo registro agregado')
     #nuevo
     id = db.mostrar('Usuarios', where=f'Celular={celular}')[0][0]
     ventana.tabla_datos.insert('',END, text=id, values=(name,apellido,celular))
@@ -31,10 +31,10 @@ def nuevo(ventana):
 #eliminar 
 def eliminar(ventana):
     elemento_eliminar = ventana.tabla_datos.selection()
-    dato = ventana.tabla_datos.item(elemento_eliminar)['text'] #sirve para mostrar el registro seleccionado
+    dato = ventana.tabla_datos.item(elemento_eliminar)['text'] 
     ventana.tabla_datos.delete(elemento_eliminar)
     db.eliminar('Usuarios',where=f'id= "{dato}"')
-    showwarning(title='Delete', message='registro eliminado')
+    showwarning(title='Eliminar', message='registro eliminado')
 
 def actualizar(ventana):
     if ventana.nombre_texto.get()=='':
