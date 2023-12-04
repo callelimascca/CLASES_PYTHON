@@ -75,6 +75,6 @@ class InterfazApp(Tk):
         for id,nom,ape,num in alumnitos:
             self.tabla_datos.insert('',END,text=id, values=(nom,ape,num))
         self.tabla_datos.place(x=0, y=0, width=400,height=600)
-        # self.tabla_datos.insert('', END, text='hola', values=('rodriguez','93344'))
+
         self.tabla_datos.bind('<Double-1>',lambda event:doble_clic(self,event))
-        #fin de tabla de datos
+
